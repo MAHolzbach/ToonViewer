@@ -7,7 +7,7 @@ import "./index.css";
 import "bootstrap/dist/css/bootstrap.css";
 import App from "./components/App.jsx";
 import registerServiceWorker from "./registerServiceWorker";
-import rootReducer from "./reducers/index";
+// import rootReducer from "./reducers/index";
 
 // const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
