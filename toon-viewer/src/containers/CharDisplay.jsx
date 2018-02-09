@@ -1,17 +1,23 @@
 import React, { Component } from "react";
+import { ListGroup, ListGroupItem } from "reactstrap";
+import { connect } from "react-redux";
 
-export default class CharDisplay extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  renderChar = charData => {};
+class CharDisplay extends Component {
+  renderChar = charData => {
+    return this.props.char.map(item => {
+      return <ListGroupItem>{item.averageItemLevel}</ListGroupItem>;
+    });
+  };
 
   render() {
-    return ();
+    return <ListGroup>{this.renderChar()}</ListGroup>;
   }
 }
 
-const mapStateToProps = ({char}) => ({
-  char
-})
+const mapStateToProps = state => {
+  return {
+    char: state.char
+  };
+};
+
+export default connect(mapStateToProps)(CharDisplay);

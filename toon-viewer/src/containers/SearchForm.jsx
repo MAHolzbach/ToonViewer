@@ -25,13 +25,14 @@ class SearchForm extends Component {
     });
   };
 
-  handleFormSubmit = event => {
+  handleFormSubmit = async event => {
     event.preventDefault();
-    this.props.fetchChar(this.state.charName, this.state.charRealm);
+    await this.props.fetchChar(this.state.charName, this.state.charRealm);
     this.setState({
       charName: "",
       charRealm: ""
     });
+    console.log(this.state);
   };
 
   render() {

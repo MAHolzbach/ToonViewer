@@ -6,7 +6,7 @@ const ROOT_URL = `https://us.api.battle.net/wow/character/`;
 export const FETCH_CHAR = "FETCH_CHAR";
 
 export function fetchCharItems(char, realm) {
-  const url = `${ROOT_URL}${realm}/${char}?fields=items&locale=en_US&jsonp=true&apikey=${API_KEY}`;
+  const url = `${ROOT_URL}${realm}/${char}?fields=items&locale=en_US&jsonp=false&apikey=${API_KEY}`;
   const request = axios.get(url);
 
   return {
