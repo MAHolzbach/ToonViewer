@@ -7,7 +7,9 @@ class App extends Component {
   render() {
     return (
       <div className="container">
+        <h1>The World of Warcraft Toon Viewer</h1>
         <SearchForm />
+        <CharDisplay />
       </div>
     );
   }
