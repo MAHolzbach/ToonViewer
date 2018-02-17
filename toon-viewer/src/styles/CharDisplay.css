@@ -1,0 +1,79 @@
+.char-display {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(8, 1fr);
+  align-items: center;
+  justify-items: center;
+  grid-template-areas:
+    "head ... hands"
+    "neck ... waist"
+    "shoulders ... legs"
+    "back icon feet"
+    "chest ... ring1"
+    "tabard ... ring2"
+    "shirt ... trinket1"
+    "wrists ... trinket2";
+}
+.head {
+  grid-area: head;
+}
+.hands {
+  grid-area: hands;
+}
+
+.neck {
+  grid-area: neck;
+}
+
+.waist {
+  grid-area: waist;
+}
+
+.shoulders {
+  grid-area: shoulders;
+}
+.legs {
+  grid-area: legs;
+}
+
+.back {
+  grid-area: back;
+}
+.icon {
+  grid-area: icon;
+}
+
+.feet {
+  grid-area: feet;
+}
+
+.chest {
+  grid-area: chest;
+}
+
+.ring1 {
+  grid-area: ring1;
+}
+
+.tabard {
+  grid-area: tabard;
+}
+.ring2 {
+  grid-area: ring2
+}
+
+.shirt {
+  grid-area: shirt;
+}
+
+.trinket1 {
+  grid-area: trinket1;
+}
+
+.wrists {
+  grid-area: wrists;
+}
+
+.trinket2 {
+  grid-area: trinket2;
+}

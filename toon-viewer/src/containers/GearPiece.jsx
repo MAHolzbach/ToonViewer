@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import "../styles/CharDisplay.css";
 
 class GearPiece extends Component {
   render() {
@@ -8,7 +9,8 @@ class GearPiece extends Component {
       this.props.icon
     }.jpg`;
     return (
-      <div>
+      <div className={this.props.className}>
+        <p>{this.props.name}</p>
         <img src={icon} />
       </div>
     );

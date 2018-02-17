@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../App.css";
+import "../styles/CharDisplay.css";
 import SearchForm from "../containers/SearchForm.jsx";
 import CharDisplay from "../containers/CharDisplay.jsx";
 
