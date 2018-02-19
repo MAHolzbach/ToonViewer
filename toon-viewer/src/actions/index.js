@@ -8,7 +8,6 @@ export const FETCH_CHAR = "FETCH_CHAR";
 export const fetchCharItems = (char, realm) => {
   const url = `${ROOT_URL}${realm}/${char}?fields=items&locale=en_US&apikey=${API_KEY}`;
   const request = axios.get(url);
-
   return {
     type: FETCH_CHAR,
     payload: request

@@ -9,11 +9,6 @@ class App extends Component {
     return (
       <div className="container">
         <h1 className="text-center">Toon Viewer</h1>
-        <img
-          className="main-background"
-          src="https://i.imgur.com/ewvKXsQ.jpg"
-          alt=""
-        />
         <SearchForm />
         <CharDisplay />
       </div>
