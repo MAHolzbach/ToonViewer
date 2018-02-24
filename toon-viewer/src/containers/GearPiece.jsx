@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "../styles/CharDisplay.css";
 
-//TODO: Color border and text based on "quality" value from API.
-
 class GearPiece extends Component {
   render() {
     const qualityColor = val => {
@@ -24,13 +22,12 @@ class GearPiece extends Component {
       }
       return quality;
     };
-    let itemQualityColor = qualityColor(this.props.quality);
     let icon = `https://render-us.worldofwarcraft.com/icons/56/${
       this.props.icon
     }.jpg`;
     return (
       <div className={this.props.className}>
-        <div className={`${itemQualityColor} gear-piece`}>
+        <div className={`${qualityColor(this.props.quality)} gear-piece`}>
           <p className="name">{this.props.name}</p>
           <p className="ilevel">{this.props.itemLevel}</p>
           <img className="icon" src={icon} />
