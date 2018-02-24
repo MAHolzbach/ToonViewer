@@ -26,6 +26,7 @@ class CharDisplay extends Component {
               icon={toon.items.head.icon}
               name={toon.items.head.name}
               itemLevel={toon.items.head.itemLevel}
+              quality={toon.items.head.quality}
             />
             <GearPiece className="hands" icon={toon.items.hands.icon} />
             <GearPiece className="neck" icon={toon.items.neck.icon} />
