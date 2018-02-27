@@ -3,8 +3,6 @@ import { connect } from "react-redux";
 import GearPiece from "./GearPiece";
 import "../styles/CharDisplay.css";
 
-//TODO: May need to push items to an array to better manipulate them via .map().
-
 class CharDisplay extends Component {
   render() {
     let toon = this.props.char;
@@ -14,6 +12,10 @@ class CharDisplay extends Component {
       let thumbnail = `https://render-us.worldofwarcraft.com/character/${
         toon.thumbnail
       }`;
+
+      let gearArray = Object.entries(toon.items);
+      console.log(gearArray);
+
       return (
         <div>
           <h1>Your toon:</h1>
@@ -21,28 +23,16 @@ class CharDisplay extends Component {
           <h4>{toon.items.averageItemLevel}</h4>
           <div className="char-display">
             <img className="icon" src={thumbnail} alt="" />
-            <GearPiece
-              className="head"
-              icon={toon.items.head.icon}
-              name={toon.items.head.name}
-              itemLevel={toon.items.head.itemLevel}
-              quality={toon.items.head.quality}
-            />
-            <GearPiece className="hands" icon={toon.items.hands.icon} />
-            <GearPiece className="neck" icon={toon.items.neck.icon} />
-            <GearPiece className="waist" icon={toon.items.waist.icon} />
-            <GearPiece className="shoulders" icon={toon.items.shoulder.icon} />
-            <GearPiece className="legs" icon={toon.items.legs.icon} />
-            <GearPiece className="back" icon={toon.items.back.icon} />
-            <GearPiece className="feet" icon={toon.items.feet.icon} />
-            <GearPiece className="chest" icon={toon.items.chest.icon} />
-            <GearPiece className="ring1" icon={toon.items.finger1.icon} />
-            <GearPiece className="tabard" icon={toon.items.shoulder.icon} />
-            <GearPiece className="ring2" icon={toon.items.finger2.icon} />
-            <GearPiece className="shirt" icon={toon.items.shoulder.icon} />
-            <GearPiece className="trinket1" icon={toon.items.trinket1.icon} />
-            <GearPiece className="wrists" icon={toon.items.wrist.icon} />
-            <GearPiece className="trinket2" icon={toon.items.trinket2.icon} />
+            {gearArray.map(item => (
+              <GearPiece
+                className={item[0]}
+                icon={item[1].icon}
+                name={item[1].name}
+                itemLevel={item[1].itemLevel}
+                quality={item[1].quality}
+                key={item[0]}
+              />
+            ))}
           </div>
         </div>
       );

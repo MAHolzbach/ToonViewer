@@ -94,3 +94,13 @@
   color: purple;
   font-weight: 500;
 }
+.orange {
+  border: 1px solid orangered;
+  color: orangered;
+  font-weight: 500;
+}
+.tan {
+  border: 1px solid tan;
+  color: tan;
+  font-weight: 500;
+}

@@ -19,6 +19,12 @@ class GearPiece extends Component {
         case 4:
           quality = "purple";
           break;
+        case 5:
+          quality = "orange";
+          break;
+        case 6:
+          quality = "tan";
+          break;
       }
       return quality;
     };
