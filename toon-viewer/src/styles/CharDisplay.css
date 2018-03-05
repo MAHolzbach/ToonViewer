@@ -1,18 +1,19 @@
 .char-display {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: repeat(9, 1fr);
   align-items: center;
   justify-items: center;
   grid-template-areas:
     "head ... hands"
     "neck ... waist"
-    "shoulders ... legs"
+    "shoulder ... legs"
     "back icon feet"
-    "chest ... ring1"
-    "tabard ... ring2"
+    "chest ... finger1"
+    "tabard ... finger2"
     "shirt ... trinket1"
-    "wrists ... trinket2";
+    "wrist ... trinket2"
+    "mainHand ... offHand"
 }
 .head {
   grid-area: head;
@@ -20,62 +21,57 @@
 .hands {
   grid-area: hands;
 }
-
 .neck {
   grid-area: neck;
 }
-
 .waist {
   grid-area: waist;
 }
-
-.shoulders {
-  grid-area: shoulders;
+.shoulder {
+  grid-area: shoulder;
 }
 .legs {
   grid-area: legs;
 }
-
 .back {
   grid-area: back;
 }
 .icon {
   grid-area: icon;
 }
-
 .feet {
   grid-area: feet;
 }
-
 .chest {
   grid-area: chest;
 }
-
-.ring1 {
-  grid-area: ring1;
+.finger1 {
+  grid-area: finger1;
 }
-
 .tabard {
   grid-area: tabard;
 }
-.ring2 {
-  grid-area: ring2
+.finger2 {
+  grid-area: finger2
 }
-
 .shirt {
   grid-area: shirt;
+  background-image: url(https://worldofwarcraft.akamaized.net/static/components/GameIcon/GameIcon-slots.png);
 }
-
 .trinket1 {
   grid-area: trinket1;
 }
-
-.wrists {
-  grid-area: wrists;
+.wrist {
+  grid-area: wrist;
 }
-
 .trinket2 {
   grid-area: trinket2;
+}
+.mainHand {
+  grid-area: mainHand;
+}
+.offHand {
+  grid-area: offHand;
 }
 .gear-piece {
   display: grid;
@@ -100,7 +96,13 @@
   font-weight: 500;
 }
 .tan {
-  border: 1px solid tan;
+  border: 1px solid black;
   color: tan;
   font-weight: 500;
+  text-shadow: 
+    -1px -1px 0 #000,
+  	1px -1px 0 #000,
+  	-1px 1px 0 #000,
+    1px 1px 0 #000;
+  letter-spacing: 1.5px;
 }
